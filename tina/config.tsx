@@ -7,6 +7,12 @@ import Page from "./collection/page";
 
 const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
+  tinaioConfig: {
+    assetsApiUrlOverride: "https://assets.tinajs.io",
+    frontendUrlOverride: "https://pr1893-app.tinajs.dev",
+    identityApiUrlOverride: "https://pr1893-identity.tinajs.dev",
+    contentApiUrlOverride: "https://pr1893-content.tinajs.dev",
+  },
   branch:
     process.env.NEXT_PUBLIC_TINA_BRANCH! || // custom branch env override
     process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF! || // Vercel branch env
